@@ -104,6 +104,8 @@ const useUsers = () => {
       setLoading(true);
       setError(null);
       const reqUser = await getRemoteUser(id);
+      setLoading(false);
+      setError(null);
       return reqUser;  
     } catch (error) {
       handleGlobalError(error);
